@@ -1,0 +1,190 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ngx-toastr/toastr";
+@import "../src/assets/styles/abstracts/_abstracts-dir";
+// html {
+//   height: 100%;
+// }
+
+// * { padding: 0; margin: 0; }
+// html, body, #fullheight {
+//     min-height: 100% !important;
+//     height: 100%;
+// }
+// #fullheight {
+//     width: 100%;
+//     background: blue;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  color: #898f96;
+  background: #f8f8f8;
+  background-color: #f3f3f4;
+  letter-spacing: 0.09rem;
+  width: 100%;
+  height: 100vh;
+}
+.wholemain {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+  height: calc(100% - 50px);
+  // padding: 15px;
+}
+#maindivision {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  // grid-row-gap: 10px;
+}
+.headingdiv {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
+}
+.bodydiv {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 50px;
+}
+.p-card {
+  height:500px;
+
+  // height: calc(100% - 20px);
+  overflow: auto;
+}
+.p-card-content {
+  padding: 0 !important;
+}
+.pribtn {
+  width: 150px !important;
+  background-color: $btn-blue !important;
+  border-radius: 5px;
+  padding: 2px !important;
+}
+
+.cancelBtn {
+  width: 100px !important;
+  background-color: white !important;
+  border: solid 1px $btn-blue !important;
+  color: $btn-blue !important;
+  border-radius: 5px;
+  padding: 2px !important;
+}
+.saveBtn {
+  width: 100px !important;
+  background-color: $btn-blue !important;
+  // border: solid 1px $btn-blue!important;
+  color: white !important;
+  border-radius: 5px;
+  padding: 2px !important;
+}
+.greenBtn {
+  width: 100px !important;
+  background-color: $btn-green !important;
+  color: white !important;
+  border-radius: 5px;
+  padding: 2px !important;
+}
+label {
+  font-size: 13px !important;
+}
+
+.btngroup {
+  margin-top: 7px;
+}
+
+.checkcircleGreen {
+  font-size: 14px;
+  color: green;
+}
+.checkcircleRed {
+  font-size: 14px;
+  color: red;
+}
+.loading {
+  font-size: 14px;
+  color: $btn-blue;
+}
+.viewbtn {
+  background-color: $btn-green!important;
+  padding: 3px 8px;
+  color: white;
+  border-radius: 5px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.card {
+  background: #ffffff;
+  color: #495057;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+}
+.cent {
+  text-align: center!important;
+}
+
+.right {
+  text-align: right !important;
+}
+.form-control {
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  padding: 5px 10px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 13px;
+  // color: #000000;
+}
+.form-control::placeholder {
+  text-transform: none;
+  color: #cecece;
+}
+.form-control:-ms-input-placeholder {
+  text-transform: none;
+  color: #000000;
+}
+.form-control::-ms-input-placeholder {
+  text-transform: none;
+  color: #000000;
+}
+.form-control:focus{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  // padding: 3px 0px 3px 3px;
+  // margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+  outline: 0;
+  // background-color: #f1f1f1;
+}
+label{color: #919090; font-size: 12px; text-transform: uppercase; font-weight: 500; margin-bottom: 0.1rem;}
+
+.left
+{
+  text-align: left!important;
+}
+.right{
+  text-align: right!important;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

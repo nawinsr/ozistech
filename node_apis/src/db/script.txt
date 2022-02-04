@@ -1,0 +1,65 @@
+
+
+CREATE TABLE `album` (
+  `id` bigint(20) NOT NULL,
+  `uid` varchar(265) NOT NULL,
+  `studio_name` varchar(265) NOT NULL,
+  `cus_name` varchar(265) DEFAULT NULL,
+  `event_name` varchar(265) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `email` varchar(265) DEFAULT NULL,
+  `mobile` varchar(265) DEFAULT NULL,  
+  `transid` bigint(20) NOT NULL
+) ;
+
+
+
+
+CREATE TABLE `raw_photos` (
+  `id` int(11) NOT NULL,
+  `album_id` varchar(265) NOT NULL,
+  `photo` varchar(265) NOT NULL,
+  `transid` int(11) NOT NULL
+);
+
+
+CREATE TABLE `transaction` (
+  `countername` varchar(100) NOT NULL DEFAULT 'TRANSACTION',
+  `transid` bigint(20) NOT NULL
+) ;
+
+
+
+
+CREATE TABLE `user_credentials` (
+  `id` bigint(20) NOT NULL,
+  `username` varchar(265) NOT NULL,
+  `password` varchar(265) NOT NULL,
+  `type` enum('admin') NOT NULL,
+  `transid` bigint(20) NOT NULL
+) ;
+
+
+ALTER TABLE `album`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `raw_photos`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `user_credentials`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `album`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `raw_photos`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE `user_credentials`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+
+INSERT INTO `user_credentials` (`id`, `username`, `password`, `type`, `transid`) VALUES ('1', 'admin', '$2b$12$zmmNIuMKBkefjI.6lo5JJO349aBSeCbdnCHc4tzMHP50Wqeb/jxuW', 'admin', '0');
+INSERT INTO `transaction` (`countername`, `transid`) VALUES ('TRANSACTION', '0');

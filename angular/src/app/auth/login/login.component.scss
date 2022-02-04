@@ -1,0 +1,97 @@
+@import "../../../assets/styles/abstracts/_abstracts-dir";
+.body {
+  width: 100vw;
+  height: 100vh;
+  // background-color: $color-bg;
+  background-image: url('../../../assets/images/bg.png');}
+.cent{
+  text-align: center!important;
+}
+.container {
+  width: 300px;
+  min-width: 250px;
+  height: 300px;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  // box-shadow: 3px 5px rgb(185, 184, 184);
+}
+
+.center-login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+.iround{
+  width: 70px;
+  height: 70px;
+  background-color:$color-b;
+  border-radius: 1000%;
+  display: inline-block;
+}
+.ifile{
+  line-height: 70px;
+  font-size: 35px;
+  color: white;
+}
+.stext{
+  font-size: 20px;
+  font-weight: 500;
+}
+.box{
+  width: 300px;
+  height: auto;
+  background-color: white;
+  border: solid 0.5px black;
+  border-radius: 10px;
+}
+input{
+  height: 33px;
+  width: 250px;
+  border-radius: 7px;
+}
+label{
+  margin-bottom: 50px;
+}
+.ipfield{
+  margin-left: 20px;
+  margin-top: 30px;
+}
+button {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  width: 250px!important;
+  color: white;
+  background-color: $color-b !important ;
+  border-radius: 7px;
+
+}
+
+.inputfield-btn {
+  padding: 10px;
+}
+.bbox{
+  margin-top: 20px;
+  height: 40px;
+  width: 300px;
+  background-color: white;
+  border: solid 0.5px black;
+  border-radius: 10px;
+}
+.btext{
+  font-size: 15px;
+  margin: 0;
+  line-height: 40px;
+}
+.sup{
+  color: $color-b;
+  cursor: pointer;
+}
+.ltext{
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media only screen and (max-width: 600px) {
+}

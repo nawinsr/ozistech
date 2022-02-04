@@ -1,0 +1,90 @@
+@import "../../../assets/styles/abstracts/_abstracts-dir";
+.addclientbtn {
+    float: right;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.img1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.green {
+    color: green;
+    font-size: 10px;
+}
+
+.red {
+    color: red;
+    font-size: 10px;
+}
+
+th {
+    background-color: $color-table-header!important;
+    font-size: 14px !important;
+    margin-left: 2px;
+    padding: 8px !important;
+    font-weight: bold;
+}
+
+td {
+    padding: 8px !important;
+    word-wrap: break-word;
+    /* All browsers since IE 5.5+ */
+    overflow-wrap: break-word;
+    /* Renamed property in CSS3 draft spec */
+    width: 100%;
+    font-size: 14px !important;
+}
+
+tr:nth-child(even) {
+    background-color: $color-tablse-strip;
+}
+
+// tr{
+//   padding: 1px;
+//   border-left: solid 1px black;
+//   border-right: solid 1px black;
+// }
+.tdiv {
+    height: 460px;
+    border: solid 1px $color-h-border;
+    overflow: auto;
+}
+
+.fr {
+    width: 100%;
+    height: 40px!important;
+}
+
+.ipgroup {
+    margin-top: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: repeat(6, 70px);
+    grid-column-gap: 80px;
+}
+
+.testbtn {
+    // width: auto!important;
+    float: left;
+    // margin-right: 10px;
+}
+
+.sbtn {
+    float: right;
+}
+
+input {
+    width: 100%!important;
+}
+
+.dd,
+.p-dropdown {
+    width: 100%!important;
+    height: 39px;
+    padding: 8px;
+}

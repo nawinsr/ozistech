@@ -1,0 +1,58 @@
+<div id="main" class="wholemain">
+    <div id="maindivision">
+        <div class="headingdiv">
+            <h1>Create Member</h1>
+            <div>
+                <button routerLink="/user/list" class="pribtn addclientbtn" pButton type="submit" label="Member List"></button>
+            </div>
+        </div>
+        <div class="bodydiv">
+            <p-card>
+                <div class="ipgroup" [formGroup]="createUserForm">
+                    <div>
+                        <span class="p-float-label">
+              <input id="float-input" autocomplete="off" type="text" pInputText formControlName="name">
+              <label for="float-input">Name</label>
+            </span>
+                    </div>
+
+
+                    <div>
+                        <span class="p-float-label">
+              <input id="float-input" autocomplete="off" type="text" pInputText formControlName="mobile">
+              <label for="float-input">Mobile</label>
+            </span>
+                    </div>
+
+                    <div>
+                        <span class="p-float-label">
+              <input id="float-input" type="date" pInputText autocomplete="off" formControlName="dob">
+              <label for="float-input">Date Of Birth</label>
+            </span>
+                    </div>
+                    <div>
+                        <span class="p-float-label">
+              <input id="float-input" type="text" pInputText autocomplete="off" formControlName="address">
+              <label for="float-input">Address</label>
+            </span>
+                    </div>
+
+
+
+                    <div class="inputfield-btn cent ">
+
+                    </div>
+
+                    <div class="inputfield-btn cent  ">
+                        <button class="cancelBtn testbtn" pButton label="Cancel" (click)="reset()"></button>
+
+                        <button class="saveBtn sbtn" pButton label="SUBMIT" (click)="onSubmit()"></button>
+                    </div>
+
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>
+
+<!-- <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#fff" type = "square-loader" [fullScreen] = "true"><p style="color: white" > Working on it... </p></ngx-spinner> -->

@@ -1,0 +1,58 @@
+<div id="main" class="wholemain">
+    <div id="maindivision">
+        <div class="headingdiv">
+            <h1>Member List</h1>
+            <div>
+                <button routerLink="/user/create" class="pribtn addclientbtn" pButton type="submit" label="Create Member"></button>
+            </div>
+        </div>
+        <div class="bodydiv">
+            <p-card>
+                <div class="tdiv">
+                    <p-table [value]="userList" [showCurrentPageReport]="true">
+
+                        <ng-template pTemplate="header">
+                            <tr *ngIf="userList">
+                                <th appIfellipsis>Name</th>
+                                <th appIfellipsis>Mobile</th>
+                                <th appIfellipsis>Date Of Birth</th>
+                                <th appIfellipsis>Address</th>
+                                <th appIfellipsis>Membership</th>
+
+                                <th style="width: 70px; cursor: pointer;">Edit</th>
+                                <th style="width: 70px; cursor: pointer;">delete</th>
+
+
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-data>
+                            <tr>
+                                <td appIfellipsis>{{data.name}}</td>
+                                <td appIfellipsis>{{data.mobile}}</td>
+                                <td appIfellipsis>{{data.dob | customdate}}</td>
+                                <td appIfellipsis>{{data.address}}</td>
+                                <td style="color: blue;cursor: pointer;" *ngIf="data.membership==0" (click)="getMembership(data.id)" appIfellipsis>BUY</td>
+                                <td style="color: green; font-weight: bold; cursor: pointer;" *ngIf="data.membership==1" (click)="getMembership(data.id)" appIfellipsis>Already Member</td>
+
+                                <td (click)="editUser(data.id)" style="cursor: pointer;color: blue;"><i class="pi pi-pencil"></i></td>
+                                <td style="cursor: pointer;color: red;" (click)="deleteUser(data.id)"><i class="pi pi-trash"></i></td>
+
+
+
+                            </tr>
+
+                        </ng-template>
+                        <ng-template pTemplate="emptymessage">
+                            <tr>
+                                <td colspan="7" class="cent">No Members found !</td>
+                            </tr>
+                        </ng-template>
+
+                    </p-table>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>
+
+<!-- <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#fff" type = "square-loader" [fullScreen] = "true"><p style="color: white" > Working on it... </p></ngx-spinner> -->

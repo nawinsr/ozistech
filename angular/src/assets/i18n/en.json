@@ -1,0 +1,25 @@
+{
+  "PROJECT" : {
+    "TITLE"  : "Digital Studio "
+  },
+"LOGIN" :{
+  "LOGIN" : "LOGIN",
+  "WELCOME" : "Welcome !",
+  "USERNAME":"Username",
+  "PASSWORD":"Password"
+},
+"HEADER":{
+  "LOGOUT" : "Logout",
+  "HOME":"Home",
+  "NEWALBUM":"New Album"
+},
+
+"HOME":{
+  "ALBUMS":"Albums"
+}
+
+
+
+
+
+}

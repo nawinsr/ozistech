@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>clickers</title>
+  
+  <link rel="icon" href="https://ps-codes.s3.ap-south-1.amazonaws.com/icon.ico">
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="jquery.js" nonce="418478e5-b499-4e11-8b3a-a7c70d92c6bb"></script>
+
+  <link rel="stylesheet" href="main.css" nonce="9d06ffe6-461c-44f6-8159-3390999eb863" type="text/css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/normalize.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
+
+  <!-- <script type="text/javascript" src="http://www.turnjs.com/lib/turn.min.js"></script> -->
+
+  <script src="turn.js" nonce="0ae8206e-70fb-4905-ba36-7be3bd195aa4"></script>
+
+  <script id="insert"></script>
+</head>
+
+<body>
+  <div id="flipbook" class="centered">
+
+    <div class="hard covers">
+      <img src=<%=front.p %> draggable="false"
+      alt="" />
+    </div>
+    <% for(var page of pages ){ %>
+
+      <div> <img src=<%=page.p %> draggable="false"
+        alt="" /> </div>
+      <% } %>
+
+        <div class="hard covers">
+          <img src=<%=back.p %> draggable="false"
+          alt="" />
+        </div>
+  </div>
+
+</body>
+
+<script type="text/javascript" nonce="6cf83bab-3da8-494c-902f-08b7e49f3d8b">//<![CDATA[
+  var x = window.matchMedia("(max-width: 850px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction)
+  console.log(x)
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      $("#flipbook").turn({
+        width: 560,
+        height: 400,
+        autoCenter: true
+      });
+    } else {
+      $("#flipbook").turn({
+        width: 700,
+        height: 400,
+        autoCenter: true
+      });
+    }
+  }
+
+
+  $("#flipbook").bind("turning", function (event, page, view) {
+
+  });
+//]]>
+</script>
+
+<script type="text/javascript" nonce="9c30a7d0-e866-4757-9f2e-354742af099e">
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent) {
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "ftz9180d"
+    }], "*")
+  }
+
+  // always overwrite window.name, in case users try to set it manually
+  window.name = "result"
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<div class="body">
+
+
+  <div class="container center-login">
+
+    <div class="">
+      <!-- <div class="cent">
+        <div class="iround cent">
+          <fa-icon class="ifile" [icon]="faFileAlt"></fa-icon>
+        </div>
+        <p class="stext">Log In</p>
+      </div> -->
+
+      <form [formGroup]="loginForm" ngNativeValidate>
+        <div class="box">
+          <p class="ltext">Login</p>
+          <div class="ipfield">
+            <label for="un">username </label><br>
+            <input id="un" type="text" formControlName="username">
+          </div>
+          <div class="ipfield">
+            <label for="pd">password </label><br>
+            <input id="pd" type="password" formControlName="password">
+          </div>
+
+          <div class="inputfield-btn  cent">
+              <button pButton type="submit" label="Log In" (click)="submit()"></button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- <div class="bbox cent"> -->
+        <!-- <p class="btext">Don't have account ? <span   class="sup">     Sign Up </span></p> -->
+        <!-- <p class="btext"> <span [routerLink]="['/forgot-password']"  class="sup">     Forget Password ? </span></p>
+      </div> -->
+
+      
+    </div>
+  </div>
+</div>
